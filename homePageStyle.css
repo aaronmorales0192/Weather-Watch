@@ -1,0 +1,150 @@
+/* ---------- Reset & Base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2733;
+  background-color: #f4f7fa;
+  line-height: 1.6;
+}
+ 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ 
+/* ---------- Header ---------- */
+.site-header {
+  background-color: #1c3d5a;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+ 
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+ 
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+ 
+.logo span {
+  color: #7fc4e8;
+}
+ 
+.nav-tabs ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+ 
+.nav-tabs a {
+  display: block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+ 
+.nav-tabs a:hover,
+.nav-tabs a:focus {
+  background-color: #2f5d84;
+  color: #ffffff;
+}
+ 
+/* ---------- Main / Hero ---------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+ 
+.hero {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2.5rem;
+}
+ 
+.hero h1 {
+  font-size: 2rem;
+  color: #1c3d5a;
+  margin-bottom: 1rem;
+}
+ 
+.hero p {
+  margin-bottom: 1rem;
+  color: #3c4756;
+  max-width: 75ch;
+}
+ 
+.hero p:last-child {
+  margin-bottom: 0;
+}
+ 
+/* ---------- Intro Cards ---------- */
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+ 
+.intro-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #7fc4e8;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.intro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+ 
+.intro-card h2 {
+  font-size: 1.15rem;
+  color: #1c3d5a;
+  margin-bottom: 0.5rem;
+}
+ 
+.intro-card p {
+  font-size: 0.95rem;
+  color: #5a6472;
+}
+ 
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: #1c3d5a;
+  color: #cfe0ec;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+ 
+/* ---------- Responsive ---------- */
+@media (min-width: 700px) {
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+ 
