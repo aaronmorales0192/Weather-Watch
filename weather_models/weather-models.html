@@ -32,17 +32,82 @@
       <div class="page-hero-content">
         <h1>Weather Models</h1>
         <p>
-          An overview of the numerical models meteorologists rely on to forecast
-          future conditions.
+          Weather models are the heart and soul of modern meteorological technology. 
+          Weather models are mathematical models run on computers that allow us to process
+          massive amounts of atmospheric data and produce forecasts that help predict 
+          what the weather may look like in the hours, days, or even weeks ahead. 
+          Historically, weather forecasting has been dominated by physics-based 
+          numerical weather prediction models, which use complex equations describing 
+          atmospheric physics along with current atmospheric conditions to generate 
+          forecasts. However, in recent years, AI-based weather models have become 
+          increasingly popular. These models use machine learning to learn patterns and
+          relationships from massive amounts of historical weather data, allowing them to 
+          generate forecasts quickly and, in some cases, with accuracy comparable to the
+          traditional physics-based models.
         </p>
       </div>
     </section>
 
     <section class="content-block">
-      <h2>What Are Weather Models?</h2>
+      <h2>What Are The Different Weather Models?</h2>
       <p>
-        Placeholder content — this section will explain how weather models work.
+        Weather models can be divided into different categories based on factors
+        such as the area they cover, their resolution, and the type of forecasting
+        they are designed to perform. Click a category below to learn more.
       </p>
+
+      <div class="model-categories">
+
+        <div class="model-category">
+          <button type="button" class="model-category-label" aria-expanded="false">Global Models</button>
+          <div class="model-category-panel">
+            <p>
+              Global models provide forecasts for the entire world. Because they
+              cover the entire planet, they generally use a coarser grid and
+              provide lower resolution forecasts. However, their global coverage
+              allows them to simulate large-scale atmospheric patterns and
+              provide useful forecasts several days into the future, making them
+              particularly valuable for medium and long-range forecasting.
+            </p>
+            <p class="model-examples">
+              <strong>Popular Examples:</strong> <em>GFS</em> (American Model), <em>ECMWF</em> (European Model), 
+              <em>AIGFS</em> (AI-based American Model counterpart), <em>AIFS</em> (AI-based European Model counterpart), <em>CMC</em> (Canadian Model)
+            </p>
+          </div>
+        </div>
+
+        <div class="model-category">
+          <button type="button" class="model-category-label" aria-expanded="false">Regional Models</button>
+          <div class="model-category-panel">
+            <p>
+              Regional models cover a specific part of the world at higher
+              resolution. These models are often valuable in the short-to-medium
+              range.
+            </p>
+            <p class="model-examples">
+              <strong>Examples:</strong> <em>NAM</em> (North American Model), <em>RGEM</em> (Regional Canadian Model) 
+            </p>
+          </div>
+        </div>
+
+        <div class="model-category">
+          <button type="button" class="model-category-label" aria-expanded="false">Convection-Allowing Models (CAMs)</button>
+          <div class="model-category-panel">
+            <p>
+              CAMs are regional models run at very high resolution (often around
+              1–4 km) so they can explicitly simulate individual thunderstorms
+              and other small-scale events. These models are generally used to
+              predict in the very short range (1–2 days in advance).
+            </p>
+            <p class="model-examples">
+              <strong>Examples:</strong> <em>HRRR </em>(High-Resolution Rapid Refresh – a widely used, rapidly 
+              updating CAM developed by NOAA), <em>RRFS</em> (Rapid Refresh Forecast System – NOAA's newer 
+              next-generation, rapidly updating, high-resolution weather modeling system)
+            </p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section class="content-block">
@@ -66,5 +131,8 @@
     <p>&copy; 2026 Weather Watch. All rights reserved.</p>
   </footer>
 
+  <script src="weatherModels.js"></script>
+
 </body>
 </html>
+
