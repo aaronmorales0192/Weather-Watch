@@ -16,9 +16,9 @@
       <nav class="nav-tabs">
         <ul>
           <li><a href="weather-models.html">Weather Models</a></li>
-          <li><a href="temperatures.html">Temperatures</a></li>
-          <li><a href="rain.html">Rain</a></li>
-          <li><a href="thunderstorms.html">Thunderstorms</a></li>
+          <li><a href="temperatures.html">Temperatures *COMING SOON*</a></li>
+          <li><a href="rain.html">Rain *COMING SOON*</a></li>
+          <li><a href="thunderstorms.html">Thunderstorms *COMING SOON*</a></li>
           <li><a href="snow.html">Snow *COMING SOON*</a></li>
         </ul>
       </nav>
@@ -30,21 +30,24 @@
   <main>
     <section class="page-hero">
       <div class="page-hero-content">
-        <h1>Weather Models</h1>
-        <p>
-          Weather models are the heart and soul of modern meteorological technology. 
-          Weather models are mathematical models run on computers that allow us to process
-          massive amounts of atmospheric data and produce forecasts that help predict 
-          what the weather may look like in the hours, days, or even weeks ahead. 
-          Historically, weather forecasting has been dominated by physics-based 
-          numerical weather prediction models, which use complex equations describing 
-          atmospheric physics along with current atmospheric conditions to generate 
-          forecasts. However, in recent years, AI-based weather models have become 
-          increasingly popular. These models use machine learning to learn patterns and
-          relationships from massive amounts of historical weather data, allowing them to 
-          generate forecasts quickly and, in some cases, with accuracy comparable to the
-          traditional physics-based models.
-        </p>
+        <div class="page-hero-text">
+          <h1>Weather Models</h1>
+          <p>
+            Weather models are the heart and soul of modern meteorological technology. 
+            Weather models are mathematical models run on computers that allow us to process
+            massive amounts of atmospheric data and produce forecasts that help predict 
+            what the weather may look like in the hours, days, or even weeks ahead. 
+            Historically, weather forecasting has been dominated by physics-based 
+            numerical weather prediction models, which use complex equations describing 
+            atmospheric physics along with current atmospheric conditions to generate 
+            forecasts. However, in recent years, AI-based weather models have become 
+            increasingly popular. These models use machine learning to learn patterns and
+            relationships from massive amounts of historical weather data, allowing them to 
+            generate forecasts quickly and, in some cases, with accuracy comparable to the
+            traditional physics-based models.
+          </p>
+        </div>
+        <img src="model1.png" alt="Weather model visualization" class="page-hero-image">
       </div>
     </section>
 
@@ -112,17 +115,45 @@
 
     <section class="content-block">
       <h2>Common Models Used by Meteorologists</h2>
-      <p>
-        Placeholder content — this section will cover GFS, ECMWF, NAM, HRRR, and other
-        major forecasting models.
-      </p>
+      <div class="content-with-image">
+        <p>
+          Meteorologists use a variety of models to create a complete forecast. For those 
+          new to meteorology, the sheer number of available models can be overwhelming. Two of 
+          the most widely known and used are the <strong>ECMWF</strong> and <strong>GFS</strong> 
+          models. The ECMWF, maintained by the European Centre for Medium-Range Weather Forecasts,
+           has long been regarded as one of the world's most accurate weather models. The GFS, 
+           maintained by the U.S. National Weather Service (NWS), has undergone numerous updates 
+           and has closely followed the ECMWF in accuracy and use. Both models also have AI-based 
+           counterparts, <strong>AIFS</strong> and <strong>AIGFS</strong>, which have entered 
+           operational use in recent years.
+        </p>
+        <figure class="content-figure">
+          <img src="globalModel.png" alt="GFS model run via Pivotal Weather">
+          <figcaption>GFS Model Run via Pivotal Weather</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="content-block">
-      <h2>How to Read a Model Run</h2>
+      <h2>How to View Weather Models</h2>
       <p>
-        Placeholder content — this section will explain how to interpret model output.
+        For beginners who are just getting into meteorology, I recommend using <strong>Tropical Tidbits </strong>
+        to view numerical weather model data. Tropical Tidbits provides a user-friendly 
+        interface that makes it easy to access and interpret common weather model products.
+        However, its selection of model parameters and datasets is somewhat more limited than
+        some advanced forecasting platforms. For users who want to explore more detailed model
+        data, I recommend <strong> Pivotal Weather </strong>, which provides a much wider variety of model fields,
+        parameters, and forecasting products.
       </p>
+
+      <div class="external-links">
+        <a href="https://www.tropicaltidbits.com/analysis/models/" target="_blank" rel="noopener" class="external-link-button">
+          Visit Tropical Tidbits
+        </a>
+        <a href="https://www.pivotalweather.com/model.php" target="_blank" rel="noopener" class="external-link-button">
+          Visit Pivotal Weather
+        </a>
+      </div>
     </section>
   </main>
 
@@ -135,4 +166,3 @@
 
 </body>
 </html>
-
