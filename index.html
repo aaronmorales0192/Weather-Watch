@@ -30,18 +30,17 @@
       <div class="hero-content">
         <h1>Understanding the Sky Above Us</h1>
         <p>
-          Welcome to Weather Watch, a resource dedicated to breaking down the science
-          of meteorology into clear, accessible information. Whether you're curious
-          about how forecasters predict tomorrow's storm, want to understand the
-          mechanics behind heavy rainfall, or are tracking the next snowfall, this
-          site brings together the essential concepts in one place.
+          Welcome to Weather Watch, a beginner-friendly introduction to the science
+          of meteorology. Whether you've never looked at a weather model before or
+          you're just starting to get curious about how forecasts are made, this
+          site walks you through the core concepts.
         </p>
         <p>
-          Use the tabs above to explore specific topics — from the numerical models
-          that power modern forecasting, to the atmospheric conditions that drive
-          thunderstorms, snow, and shifting temperatures. Each section is built to
-          help you understand not just <em>what</em> the weather is doing, but
-          <em>why</em>.
+          Use the tabs above to explore how weather models work, how meteorologists
+          read and interpret them, and where to find the same tools and resources
+          professionals use every day. Each section is designed to build your
+          understanding step by step, whether you're a curious weather enthusiast
+          or thinking about pursuing meteorology yourself.
         </p>
       </div>
     </section>
@@ -68,12 +67,41 @@
         <p>Understand the factors that meteorologists look at when determining whether and how much snow will end up on your backyard.</p>
       </div>
     </section>
+
+    <section class="nws-lookup-section">
+      <h2>Find Your Local NWS Office</h2>
+      <p>
+        Enter a U.S. city and state to find the National Weather Service forecast
+        office responsible for that area (for example, Fairfax, VA → KLWX).
+      </p>
+
+      <form id="nws-lookup-form" class="nws-lookup-form" data-show-office-link="true">
+        <input
+          type="text"
+          id="nws-city"
+          placeholder="City (e.g. Fairfax)"
+          required
+        >
+        <input
+          type="text"
+          id="nws-state"
+          placeholder="State (e.g. VA)"
+          maxlength="2"
+          required
+        >
+        <button type="submit">Find My Station</button>
+      </form>
+
+      <div id="nws-lookup-result" class="nws-lookup-result" aria-live="polite"></div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
     <p>&copy; 2026 Weather Watch. All rights reserved.</p>
   </footer>
+
+  <script src="nwsLookup.js"></script>
 
 </body>
 </html>
