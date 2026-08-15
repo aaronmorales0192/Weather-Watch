@@ -33,19 +33,35 @@
         <div class="page-hero-text">
           <h1>Temperatures</h1>
           <p>
-            An overview of how meteorologists forecast high and low temperatures,
-            and the atmospheric factors that drive daily temperature patterns.
+            An overview of how meteorologists forecast high and low temperatures.
           </p>
         </div>
       </div>
     </section>
 
     <section class="content-block">
-      <h2>What Determines Daily Temperatures?</h2>
-      <p>
-        Placeholder content — this section will explain the atmospheric and
-        surface-level factors that drive daily high and low temperatures.
-      </p>
+      <h2>Using Models to Forecast Temperatures?</h2>
+      <div class="content-with-image">
+        <p>
+          Weather models can provide a baseline for forecasting temperatures. Models 
+          such as the GFS, ECMWF, HRRR, and other regional models forecast temperature 
+          at different times of the day and at multiple levels in the atmosphere. When 
+          forecasting surface temperatures, meteorologists generally examine the <strong> 2m
+          temperature </strong>, which represents the temperature approximately 2 meters (6.5 feet)
+          above the ground. This value is commonly used as an estimate of the air temperature
+          near the surface and is the basis for many standard forecasts.
+        </p>
+        <figure class="content-figure">
+          <img src="2m.png" alt="2m temperature output from the GFS model" class="enlargeable-image">
+          <figcaption>2m temperature output from the GFS model for a summer morning from pivotalweather.com</figcaption>
+        </figure>
+      </div>
+
+      <div class="external-links">
+        <a href="https://www.pivotalweather.com/model.php?m=gfs&p=sfct-imp&r=conus" target="_blank" rel="noopener" class="external-link-button">
+          View Weather Model 2m Temps on Pivotal Weather
+        </a>
+      </div>
     </section>
 
     <section class="content-block">
@@ -66,10 +82,17 @@
     </section>
   </main>
 
+  <!-- Image lightbox overlay -->
+  <div id="image-lightbox" class="image-lightbox">
+    <img id="image-lightbox-img" src="" alt="">
+  </div>
+
   <!-- Footer -->
   <footer class="site-footer">
     <p>&copy; 2026 Weather Watch. All rights reserved.</p>
   </footer>
+
+  <script src="../imageLightbox.js"></script>
 
 </body>
 </html>

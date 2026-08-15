@@ -17,8 +17,8 @@
         <ul>
           <li><a href="weather-models.html">Weather Models</a></li>
           <li><a href="../temperatures/temps.html">Temperatures</a></li>
-          <li><a href="rain.html">Rain *COMING SOON*</a></li>
-          <li><a href="thunderstorms.html">Thunderstorms *COMING SOON*</a></li>
+          <li><a href="rain.html">Rain</a></li>
+          <li><a href="thunderstorms.html">Thunderstorms</a></li>
           <li><a href="snow.html">Snow *COMING SOON*</a></li>
         </ul>
       </nav>
@@ -47,7 +47,7 @@
             traditional physics-based models.
           </p>
         </div>
-        <img src="model1.png" alt="Weather model visualization" class="page-hero-image">
+        <img src="model1.png" alt="Weather model visualization" class="page-hero-image enlargeable-image">
       </div>
     </section>
 
@@ -128,7 +128,7 @@
            operational use in recent years.
         </p>
         <figure class="content-figure">
-          <img src="globalModel.png" alt="GFS model run via Pivotal Weather">
+          <img src="globalModel.png" alt="GFS model run via Pivotal Weather" class="enlargeable-image">
           <figcaption>GFS Model Run via Pivotal Weather</figcaption>
         </figure>
       </div>
@@ -142,20 +142,52 @@
         interface that makes it easy to access and interpret common weather model products.
         However, its selection of model parameters and datasets is somewhat more limited than
         some advanced forecasting platforms. For users who want to explore more detailed model
-        data, I recommend <strong> Pivotal Weather</strong>, which provides a much wider variety of model fields,
+        data, I recommend <strong> Pivotal Weather </strong>, which provides a much wider variety of model fields,
         parameters, and forecasting products.
       </p>
 
       <div class="external-links">
-        <a href="https://www.tropicaltidbits.com/analysis/models/" target="_blank" rel="noopener" class="external-link-button">
+        <a href="https://www.tropicaltidbits.com" target="_blank" rel="noopener" class="external-link-button">
           Visit Tropical Tidbits
         </a>
-        <a href="https://www.pivotalweather.com/model.php" target="_blank" rel="noopener" class="external-link-button">
+        <a href="https://www.pivotalweather.com" target="_blank" rel="noopener" class="external-link-button">
           Visit Pivotal Weather
         </a>
       </div>
     </section>
+
+    <section class="content-block">
+      <h2>Find Your Local NWS Office</h2>
+      <p>
+        Enter a U.S. city and state to find the National Weather Service forecast
+        office responsible for that area (for example, Fairfax, VA → KLWX).
+      </p>
+
+      <form id="nws-lookup-form" class="nws-lookup-form">
+        <input
+          type="text"
+          id="nws-city"
+          placeholder="City (e.g. Fairfax)"
+          required
+        >
+        <input
+          type="text"
+          id="nws-state"
+          placeholder="State (e.g. VA)"
+          maxlength="2"
+          required
+        >
+        <button type="submit">Find My Station</button>
+      </form>
+
+      <div id="nws-lookup-result" class="nws-lookup-result" aria-live="polite"></div>
+    </section>
   </main>
+
+  <!-- Image lightbox overlay -->
+  <div id="image-lightbox" class="image-lightbox">
+    <img id="image-lightbox-img" src="" alt="">
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -163,6 +195,8 @@
   </footer>
 
   <script src="weatherModels.js"></script>
+  <script src="../nwsLookup.js"></script>
+  <script src="../imageLightbox.js"></script>
 
 </body>
 </html>
