@@ -171,21 +171,43 @@ main {
   margin-top: 1.25rem;
 }
 
-.nws-lookup-form input {
+.nws-lookup-form input,
+.nws-lookup-form select {
   padding: 0.6rem 0.9rem;
   border: 1px solid #cfd8e0;
   border-radius: 6px;
   font-size: 0.95rem;
   font-family: inherit;
+  background-color: #ffffff;
 }
 
 .nws-lookup-form input#nws-city {
   flex: 1 1 220px;
 }
 
-.nws-lookup-form input#nws-state {
-  flex: 0 0 90px;
-  text-transform: uppercase;
+.nws-lookup-form select#nws-state {
+  flex: 0 0 110px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%231c3d5a' d='M5.5 7.5l4.5 4.5 4.5-4.5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1rem;
+  padding-right: 2.1rem;
+}
+
+.nws-lookup-form select#nws-state:focus {
+  outline: none;
+  border-color: #1c3d5a;
+  box-shadow: 0 0 0 3px rgba(28, 61, 90, 0.12);
+}
+
+.nws-lookup-form input:focus {
+  outline: none;
+  border-color: #1c3d5a;
+  box-shadow: 0 0 0 3px rgba(28, 61, 90, 0.12);
 }
 
 .nws-lookup-form button {
