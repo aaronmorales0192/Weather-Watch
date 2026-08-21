@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Watch | Snow</title>
+  <title>Weather Watch | Precipitation</title>
   <link rel="stylesheet" href="../homePageStyle.css">
   <link rel="stylesheet" href="precip.css">
 </head>
@@ -30,10 +30,10 @@
     <section class="page-hero">
       <div class="page-hero-content">
         <div class="page-hero-text">
-          <h1>Snow</h1>
+          <h1>Precipitation</h1>
           <p>
-            An overview of the atmospheric conditions that determine whether
-            precipitation falls as snow, and how much accumulates.
+            An overview of the different types of precipitation, radars, and how meteorologists 
+            track and forecast precipitation. 
           </p>
         </div>
         <img src="snow.jpeg" alt="Snowfall" class="page-hero-image enlargeable-image">
@@ -41,11 +41,150 @@
     </section>
 
     <section class="content-block">
-      <h2>What Conditions Are Needed for Snow?</h2>
+      <h2>Types of Precipitation</h2>
       <p>
-        Placeholder content — this section will cover temperature profiles
-        through the atmosphere and how they determine precipitation type.
+        What falls from a cloud almost always starts out as snow. What it
+        turns into by the time it reaches the ground depends entirely on
+        the temperature profile it falls through — specifically, how much
+        of that path is above freezing versus below freezing.
       </p>
+
+      <div class="precip-type-info">
+        <h3>Snow</h3>
+        <p>
+          Snow forms when the entire atmospheric column, from the cloud all
+          the way to the surface, stays at or below freezing. Since the
+          snowflake never encounters an air layer warm enough to melt it, it
+          reaches the ground still frozen.
+        </p>
+      </div>
+
+      <div class="precip-type-info">
+        <h3>Sleet</h3>
+        <p>
+          Sleet occurs when a snowflake falls through a shallow layer of
+          air above freezing, partially melting it, before falling back
+          into a deep enough layer of sub-freezing air near the surface
+          to refreeze it into a small ice pellet before it reaches the
+          ground.
+        </p>
+      </div>
+
+      <div class="precip-type-info">
+        <h3>Freezing Rain</h3>
+        <p>
+          Freezing rain forms when a snowflake falls through a deeper
+          warm layer, fully melting into a raindrop. It then passes
+          through only a thin layer of sub-freezing air near the surface, which is
+          too shallow to refreeze it before landing. Instead, it stays
+          liquid until it strikes a surface that is at or below freezing,
+          where it freezes on contact.
+        </p>
+      </div>
+
+      <div class="precip-type-info">
+        <h3>Rain</h3>
+        <p>
+          Rain falls when the warm layer extends essentially all the way
+          to the surface. The snowflake melts aloft and never re-enters a
+          sub-freezing layer, so it reaches the ground as plain liquid
+          rain.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <h2>How Precipitation Type Is Determined</h2>
+      <p>
+        The diagram below shows a simplified version of the atmospheric
+        temperature profile behind each precipitation type. Blue represents
+        air below freezing, and red represents air above freezing. Click a
+        button below to switch between types.
+      </p>
+
+      <div class="precip-diagram-wrapper">
+
+        <div class="precip-cloud-row">
+          <span>☁️</span><span>☁️</span><span>☁️</span><span>☁️</span><span>☁️</span>
+        </div>
+
+        <div class="precip-diagram" id="precip-diagram">
+
+          <!-- Snow -->
+          <div class="precip-panel active" data-panel="snow">
+            <div class="precip-column">
+              <div class="precip-layer cold" style="flex-grow: 100;">
+                <span class="precip-layer-label">Cold Air (below freezing)</span>
+              </div>
+              <div class="precip-particles"></div>
+            </div>
+            <div class="precip-ground"></div>
+            <p class="precip-result">No melting occurs — falls to the ground as snow.</p>
+          </div>
+
+          <!-- Sleet -->
+          <div class="precip-panel" data-panel="sleet">
+            <div class="precip-column">
+              <div class="precip-layer cold" style="flex-grow: 30;">
+                <span class="precip-layer-label">Cold Air</span>
+              </div>
+              <div class="precip-layer warm" style="flex-grow: 15;">
+                <span class="precip-layer-label">Warm Air (above freezing)</span>
+              </div>
+              <div class="precip-layer cold" style="flex-grow: 55;">
+                <span class="precip-layer-label">Cold Air</span>
+              </div>
+              <div class="precip-particles"></div>
+            </div>
+            <div class="precip-ground"></div>
+            <p class="precip-result">Partially melts, then refreezes into ice pellets before reaching the ground.</p>
+          </div>
+
+          <!-- Freezing Rain -->
+          <div class="precip-panel" data-panel="freezing-rain">
+            <div class="precip-column">
+              <div class="precip-layer cold" style="flex-grow: 20;">
+                <span class="precip-layer-label">Cold Air</span>
+              </div>
+              <div class="precip-layer warm" style="flex-grow: 65;">
+                <span class="precip-layer-label">Warm Air (above freezing)</span>
+              </div>
+              <div class="precip-layer cold" style="flex-grow: 15;">
+                <span class="precip-layer-label">Cold Air</span>
+              </div>
+              <div class="precip-particles"></div>
+            </div>
+            <div class="precip-ground">
+              <div class="precip-ice-marks"></div>
+            </div>
+            <p class="precip-result">Fully melts into rain, then freezes instantly on contact with the below-freezing surface.</p>
+          </div>
+
+          <!-- Rain -->
+          <div class="precip-panel" data-panel="rain">
+            <div class="precip-column">
+              <div class="precip-layer cold" style="flex-grow: 15;">
+                <span class="precip-layer-label">Cold Air</span>
+              </div>
+              <div class="precip-layer warm" style="flex-grow: 85;">
+                <span class="precip-layer-label">Warm Air (above freezing)</span>
+              </div>
+              <div class="precip-particles"></div>
+            </div>
+            <div class="precip-ground"></div>
+            <p class="precip-result">Melts aloft and never refreezes — reaches the ground as plain rain.</p>
+          </div>
+
+        </div>
+
+        <div class="precip-buttons">
+          <button type="button" class="precip-btn active" data-panel="snow">Snow</button>
+          <button type="button" class="precip-btn" data-panel="sleet">Sleet</button>
+          <button type="button" class="precip-btn" data-panel="freezing-rain">Freezing Rain</button>
+          <button type="button" class="precip-btn" data-panel="rain">Rain</button>
+        </div>
+
+      </div>
     </section>
 
     <section class="content-block">
@@ -76,6 +215,7 @@
   </footer>
 
   <script src="../imageLightbox.js"></script>
+  <script src="precipDiagram.js"></script>
 
 </body>
 </html>

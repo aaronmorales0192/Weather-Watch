@@ -1,4 +1,4 @@
-/* ---------- Storms Page ---------- */
+/* ---------- Precipitation Page ---------- */
 
 .home-link {
   padding: 0.6rem 1.1rem;
@@ -74,74 +74,212 @@
   margin-bottom: 0.75rem;
 }
 
-.content-block p {
+.content-block > p {
   color: #3c4756;
   max-width: 75ch;
 }
 
-/* ---------- Content Block With Side Image ---------- */
+/* ---------- Precip Type Subsections ---------- */
 
-.content-with-image {
+.precip-type-info {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eaeff3;
+}
+
+.precip-type-info:first-of-type {
+  border-top: none;
+}
+
+.precip-type-info h3 {
+  font-size: 1.1rem;
+  color: #1c3d5a;
+  margin-bottom: 0.4rem;
+}
+
+.precip-type-info p {
+  color: #3c4756;
+  max-width: 75ch;
+}
+
+/* ---------- Interactive Precip Diagram ---------- */
+
+.precip-diagram-wrapper {
+  margin-top: 1.5rem;
   display: flex;
-  align-items: flex-start;
-  gap: 1.75rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
-.content-with-image p {
-  flex: 1;
-  min-width: 250px;
-}
-
-.content-figure {
-  flex: 0 0 260px;
-  margin: 0;
-}
-
-.content-figure img {
+.precip-cloud-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  border: 1px solid #dde5ec;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  display: block;
+  max-width: 340px;
+  font-size: 2.6rem;
+  line-height: 1;
+  margin-bottom: -1.1rem;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.content-figure figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: #5a6472;
+.precip-cloud-row span:nth-child(odd) {
+  transform: translateY(-6px);
+}
+
+.precip-cloud-row span:nth-child(even) {
+  transform: translateY(4px);
+}
+
+.precip-diagram {
+  position: relative;
+  min-height: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.precip-panel {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.precip-panel.active {
+  display: flex;
+}
+
+.precip-column {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #1c3d5a;
+  border-bottom: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.precip-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 0.25rem 0.5rem;
 }
 
-@media (max-width: 650px) {
-  .content-figure {
-    flex: 1 1 100%;
-    max-width: 320px;
-  }
+.precip-layer.cold {
+  background-color: #bfe0f7;
 }
 
-/* ---------- External Link Buttons ---------- */
+.precip-layer.warm {
+  background-color: #f3b7ab;
+}
 
-.external-links {
+.precip-layer-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1c3d5a;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.precip-ground {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: 14px;
+  background-color: #5a8f4f;
+  border: 2px solid #1c3d5a;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.precip-ice-marks {
+  position: absolute;
+  inset: 0;
+}
+
+.precip-ice-mark {
+  position: absolute;
+  bottom: 0;
+  width: 12px;
+  height: 8px;
+  transform: translateX(-50%);
+  background-color: rgba(220, 240, 255, 0.85);
+  border-radius: 2px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.9);
+  animation: precip-ice-fade-in 0.3s ease-out;
+}
+
+@keyframes precip-ice-fade-in {
+  0%   { opacity: 0; transform: translateX(-50%) scaleY(0.3); }
+  100% { opacity: 1; transform: translateX(-50%) scaleY(1); }
+}
+
+.precip-result {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #1c3d5a;
+  max-width: 340px;
+}
+
+/* Falling emoji particles */
+
+.precip-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.precip-particle-emoji {
+  position: absolute;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.precip-particle-image {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ---------- Precip Toggle Buttons ---------- */
+
+.precip-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
 }
 
-.external-link-button {
-  display: inline-block;
-  padding: 0.65rem 1.25rem;
-  background-color: #1c3d5a;
-  color: #ffffff;
+.precip-btn {
+  padding: 0.55rem 1.1rem;
+  background-color: #eaf2f8;
+  color: #1c3d5a;
+  border: 1px solid #cfe0ec;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.external-link-button:hover,
-.external-link-button:focus {
-  background-color: #2f5d84;
+.precip-btn:hover {
+  background-color: #d7e6f1;
+}
+
+.precip-btn.active {
+  background-color: #1c3d5a;
+  color: #ffffff;
 }
