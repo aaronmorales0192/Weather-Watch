@@ -17,8 +17,8 @@
         <ul>
           <li><a href="../weather_models/weather-models.html">Weather Models</a></li>
           <li><a href="../temperatures/temps.html">Temperatures</a></li>
+          <li><a href="../precip/precip.html">Precipitation</a></li>
           <li><a href="storms.html">Storms</a></li>
-          <li><a href="../snow/snow.html">Snow</a></li>
         </ul>
       </nav>
       <a class="home-link" href="../index.html">Home</a>
@@ -36,32 +36,224 @@
             and other severe weather.
           </p>
         </div>
+        <img src="storms.png" alt="Thunderstorm" class="page-hero-image enlargeable-image">
       </div>
     </section>
 
     <section class="content-block">
       <h2>What Fuels a Thunderstorm?</h2>
       <p>
-        Placeholder content — this section will cover the key ingredients
-        needed for thunderstorm development, such as moisture, instability,
-        and lift.
+        Thunderstorms rely on a specific combination of atmospheric ingredients
+        to form and grow. Click each ingredient below to learn more.
       </p>
+
+      <div class="toggle-card-group">
+
+        <div class="toggle-card">
+          <button type="button" class="toggle-card-label" aria-expanded="false">CAPE</button>
+          <div class="toggle-card-panel">
+            <p>
+              CAPE (Convective Available Potential Energy) measures the amount
+              of energy available to fuel a rising air parcel. Higher CAPE
+              values indicate a more unstable atmosphere, which allows storm
+              updrafts to grow stronger and taller.
+            </p>
+            <p>
+              Values around 1,000–2,500 J/kg generally support thunderstorm
+              development, while values above 2,500–3,000 J/kg indicate a
+              more unstable atmosphere capable of supporting stronger,
+              higher-end severe storms.
+            </p>
+            <a href="https://www.pivotalweather.com/model.php?m=hrrr&p=mucape&rh=2026082012&fh=1&r=conus&dpdt=&mc=" target="_blank" rel="noopener" class="external-link-button">
+              View CAPE on Pivotal Weather
+            </a>
+          </div>
+        </div>
+
+        <div class="toggle-card">
+          <button type="button" class="toggle-card-label" aria-expanded="false">Wind Shear</button>
+          <div class="toggle-card-panel">
+            <p>
+              Wind shear is the change in wind speed and/or direction with
+              height. It helps organize storms and tilt their updrafts,
+              which can allow a storm to sustain itself longer and, in
+              stronger cases, contributes to the rotation seen in supercells.
+            </p>
+            <p>
+              0–6 km bulk shear values around 20–35 kt generally support more
+              organized multicell or supercell storms, while values above
+              40 kt further favor sustained rotation and higher-end severe
+              weather potential.
+            </p>
+            <a href="https://www.pivotalweather.com/model.php?m=hrrr&p=bs06&rh=2026082012&fh=1&r=conus&dpdt=&mc=" target="_blank" rel="noopener" class="external-link-button">
+              View Wind Shear on Pivotal Weather
+            </a>
+          </div>
+        </div>
+
+        <div class="toggle-card">
+          <button type="button" class="toggle-card-label" aria-expanded="false">Moisture</button>
+          <div class="toggle-card-panel">
+            <p>
+              Moisture, often measured using dewpoint, supplies the water
+              vapor needed to form clouds and precipitation. Higher
+              low-level moisture generally supports stronger, more efficient
+              thunderstorm development.
+            </p>
+            <p>
+              For severe thunderstorms, surface dewpoints generally need to
+              reach at least 55°F to 60°F to supply basic moisture, while
+              values of 65°F to 70°F or higher can provide significant
+              moisture for more elevated risks.
+            </p>
+            <a href="https://www.pivotalweather.com/model.php?m=hrrr&p=sfctd-imp&rh=2026082012&fh=1&r=conus&dpdt=&mc=" target="_blank" rel="noopener" class="external-link-button">
+              View Moisture on Pivotal Weather
+            </a>
+          </div>
+        </div>
+
+        <div class="toggle-card">
+          <button type="button" class="toggle-card-label" aria-expanded="false">Lift</button>
+          <div class="toggle-card-panel">
+            <p>
+              Lift is the mechanism that triggers a rising air parcel in the
+              first place. Common sources of lift include fronts, drylines,
+              daytime heating, and terrain (orographic lift).
+            </p>
+            <p>
+              Weak lift may only produce isolated showers or non-severe
+              storms, while strong, focused lift along a front or dryline
+              can trigger more widespread and organized storm development.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section class="content-block">
-      <h2>Types of Severe Storms</h2>
+      <h2>Types of Storms</h2>
+
       <p>
-        Placeholder content — this section will cover different storm types,
-        including single-cell, multi-cell, and supercell thunderstorms.
+        Not every thunderstorm is classified as "severe." The National Weather
+        Service defines a thunderstorm as severe if it produces at least one
+        of the following: wind gusts of 58 mph or greater or hail at least 1 inch in
+        diameter (quarter-sized). A storm that doesn't
+        meet any of these thresholds is simply considered a regular
+        thunderstorm, even if it produces heavy rain, frequent lightning, or
+        brief gusty winds. The four storm types below can each range from
+        ordinary to severe depending on the ingredients present at the time.
       </p>
+
+      <div class="storm-type-group">
+
+        <div class="toggle-card storm-type-item">
+          <button type="button" class="toggle-card-label" aria-expanded="false">Single-Cell Storms</button>
+          <div class="toggle-card-panel">
+            <div class="content-with-image">
+              <p>
+                Single-cell (or "pulse") storms are the most basic type of
+                thunderstorm, consisting of a single updraft with no significant
+                organization. They typically form in weak wind shear/high CAPE environments
+                and are short-lived, usually lasting under an hour before
+                the storm's own rain-cooled outflow cuts off its updraft. Single-cell
+                storms can still produce brief heavy rain, small hail, and
+                occasional gusty winds, but they generally pose the lowest severe
+                weather risk of the four storm types.
+              </p>
+              <figure class="content-figure">
+                <img src="single.png" alt="Single-cell storm near the Georgia/South Carolina border" class="enlargeable-image">
+                <figcaption>A single-cell storm near the GA/SC border</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="toggle-card storm-type-item">
+          <button type="button" class="toggle-card-label" aria-expanded="false">Multi-Cell Storms</button>
+          <div class="toggle-card-panel">
+            <div class="content-with-image">
+              <p>
+                Multi-cell storms are clusters of individual storm cells at
+                various stages of development, often forming along or near a
+                common boundary or source of lift. As one cell weakens, new cells 
+                can form along its outflow boundary, allowing multi-cell clusters to persist
+                much longer than single-cell storms. This longer lifespan gives
+                multi-cell storms more opportunity to produce stronger wind
+                gusts, larger hail, and, in some cases, brief tornadoes.
+              </p>
+              <figure class="content-figure">
+                <img src="multi.png" alt="Multi-cell storms developing near the DC metro area" class="enlargeable-image">
+                <figcaption>Multi-cell storms developing near the DC metro area</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="toggle-card storm-type-item">
+          <button type="button" class="toggle-card-label" aria-expanded="false">Squall Lines</button>
+          <div class="toggle-card-panel">
+            <div class="content-with-image">
+              <p>
+                A squall line is a long line of thunderstorms, often forming
+                along or just ahead of a cold front. Squall lines are mainly known for
+                producing widespread strong straight-line winds over a large
+                area as they move through, and in some cases can even produce
+                embedded rotation and brief QLCS-type tornadoes along the line. 
+              </p>
+              <figure class="content-figure">
+                <img src="squallline.png" alt="Squall line moving southeast over the Delmarva Peninsula" class="enlargeable-image">
+                <figcaption>A squall line moving SE over the Delmarva Peninsula</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="toggle-card storm-type-item">
+          <button type="button" class="toggle-card-label" aria-expanded="false">Supercells</button>
+          <div class="toggle-card-panel">
+            <div class="content-with-image">
+              <p>
+                Supercells are the most organized and dangerous type of
+                thunderstorm, defined by a deep, persistent rotating updraft
+                known as a mesocyclone. Strong wind shear allows this rotation to
+                develop and sustain itself, sometimes for hours at a time. Supercells
+                are responsible for the vast majority of significant tornadoes,
+                as well as very large hail and extreme wind gusts. 
+              </p>
+              <figure class="content-figure">
+                <img src="super.png" alt="Velocity radar scan of a powerful supercell producing a strong tornado" class="enlargeable-image">
+                <figcaption>Velocity radar scan of a powerful supercell producing a strong tornado</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section class="content-block">
       <h2>How Meteorologists Track Storms</h2>
-      <p>
-        Placeholder content — this section will explain how radar, satellite,
-        and severe weather models are used to monitor developing storms.
-      </p>
+      <div class="content-with-image">
+        <p>
+          Before storms form, meteorologists examine whether the atmosphere contains the
+          ingredients needed for severe thunderstorms, such as sufficient <strong>moisture,
+          instability (CAPE), and wind shear</strong>. Meteorologists often use shorter-range
+          <strong>CAMs (Convection-Allowing Models)</strong>, which are weather models designed
+          to explicitly simulate individual thunderstorms, squall lines, and other smaller-scale
+          features rather than just broad areas of precipitation. By analyzing these models along
+          with the atmosphere's thermodynamic and wind environment, meteorologists can create
+          outlooks identifying areas where hazards such as tornadoes, flooding, and severe
+          thunderstorms are more likely to develop. As storms begin to form, <strong>weather
+          radar</strong> becomes one of the most important tools for tracking them. Meteorologists
+          use radar to monitor storm location, intensity, movement, and rotation while comparing
+          the observed storms with CAM forecasts to evaluate how well the models are verifying.
+        </p>
+        <figure class="content-figure">
+          <img src="spc.png" alt="Storm Prediction Center convective outlook" class="enlargeable-image">
+          <figcaption>An SPC convective outlook highlighting the severe weather risk for a given day</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
@@ -76,6 +268,7 @@
   </footer>
 
   <script src="../imageLightbox.js"></script>
+  <script src="../toggleCards.js"></script>
 
 </body>
 </html>

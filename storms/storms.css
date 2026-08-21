@@ -86,11 +86,35 @@
   align-items: flex-start;
   gap: 1.75rem;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.content-with-image:first-of-type {
+  padding-top: 0;
+}
+
+.content-with-image:not(:first-of-type) {
+  border-top: 1px solid #eaeff3;
+}
+
+.content-with-image:last-child {
+  margin-bottom: 0;
+}
+
+.content-with-image > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.content-with-image h3 {
+  font-size: 1.1rem;
+  color: #1c3d5a;
+  margin-bottom: 0.5rem;
 }
 
 .content-with-image p {
-  flex: 1;
-  min-width: 250px;
+  color: #3c4756;
 }
 
 .content-figure {
@@ -144,4 +168,68 @@
 .external-link-button:hover,
 .external-link-button:focus {
   background-color: #2f5d84;
+}
+
+/* ---------- Storm Type Accordion (horizontal dropdown tabs) ---------- */
+
+.storm-type-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.storm-type-group .toggle-card {
+  position: static;
+}
+
+.storm-type-group .toggle-card-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.storm-type-group .toggle-card-label::after {
+  content: "+";
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.storm-type-group .toggle-card.open .toggle-card-label::after {
+  content: "\2212";
+}
+
+.storm-type-group .toggle-card-panel {
+  position: static;
+  width: auto;
+  max-width: none;
+  display: none;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  margin-top: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: none;
+  border: 1px solid #dde5ec;
+}
+
+.storm-type-group .toggle-card.open .toggle-card-panel {
+  display: block;
+}
+
+.storm-type-group .toggle-card-panel .content-with-image {
+  margin-bottom: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.storm-type-group .toggle-card-panel p {
+  font-size: 0.95rem;
 }
