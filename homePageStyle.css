@@ -75,6 +75,13 @@ a {
   text-transform: uppercase;
   text-shadow: 0 0 8px rgba(255, 204, 51, 0.5);
   align-self: flex-end;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.powered-by:hover,
+.powered-by:focus {
+  color: #ffe08a;
+  text-shadow: 0 0 12px rgba(255, 224, 138, 0.8);
 }
  
 /* ---------- Main / Hero ---------- */
