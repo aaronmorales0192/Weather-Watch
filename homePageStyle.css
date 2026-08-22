@@ -264,6 +264,86 @@ main {
   color: #b3372c;
 }
 
+/* ---------- Contact Section ---------- */
+
+.contact-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 2.5rem;
+}
+
+.contact-section h2 {
+  font-size: 1.3rem;
+  color: #1c3d5a;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section > p {
+  color: #3c4756;
+  max-width: 75ch;
+  margin-bottom: 1.25rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.contact-icon-image {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: #1c3d5a;
+}
+
+.contact-value {
+  color: #1c3d5a;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-value:hover,
+.contact-value:focus {
+  color: #2f5d84;
+  text-decoration: underline;
+}
+
+.contact-discord-link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background-color: #1c3d5a;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.contact-discord-link:hover,
+.contact-discord-link:focus {
+  background-color: #2f5d84;
+}
+
 /* ---------- Image Lightbox ---------- */
 
 .enlargeable-image {
