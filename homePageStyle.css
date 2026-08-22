@@ -66,6 +66,16 @@ a {
   background-color: #2f5d84;
   color: #ffffff;
 }
+
+.powered-by {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #ffcc33;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(255, 204, 51, 0.5);
+  align-self: flex-end;
+}
  
 /* ---------- Main / Hero ---------- */
 main {
