@@ -233,3 +233,54 @@
 .storm-type-group .toggle-card-panel p {
   font-size: 0.95rem;
 }
+
+/* ---------- SPC Convective Outlooks ---------- */
+
+.spc-outlook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.spc-outlook-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 2rem 1.25rem;
+  background-color: #eaf2f8;
+  border: 1px solid #cfe0ec;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.spc-outlook-card:hover,
+.spc-outlook-card:focus {
+  background-color: #1c3d5a;
+  border-color: #1c3d5a;
+  transform: translateY(-2px);
+}
+
+.spc-outlook-day {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1c3d5a;
+}
+
+.spc-outlook-sub {
+  font-size: 0.85rem;
+  color: #5a6472;
+}
+
+.spc-outlook-card:hover .spc-outlook-day,
+.spc-outlook-card:focus .spc-outlook-day {
+  color: #ffffff;
+}
+
+.spc-outlook-card:hover .spc-outlook-sub,
+.spc-outlook-card:focus .spc-outlook-sub {
+  color: #cfe0ec;
+}

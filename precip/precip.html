@@ -6,6 +6,7 @@
   <title>Weather Watch | Precipitation</title>
   <link rel="stylesheet" href="../homePageStyle.css">
   <link rel="stylesheet" href="precip.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 <body>
 
@@ -192,15 +193,26 @@
       <div class="content-with-image">
         <p>
           Radar maps show meteorologists where precipitation is currently
-          falling, how intense it is, and where it's headed next. During
-          winter storms, radar output is often paired with model
+          falling, how intense it is, and where it's headed next. There are
+          actually two different kinds of radar color schemes you'll run
+          into, and it's worth knowing the difference. During winter
+          storms, radar output is often paired with model
           precipitation-type guidance to distinguish not just where
           precipitation is falling, but what kind is expected in each
-          location. On traditional radar maps, blue shades typically
-          represent snow, pink or purple shades represent freezing rain and
-          sleet, and green shades represent rain. Darker shades indicate
-          heavier precipitation, with the heaviest rain (often associated
-          with thunderstorms) appearing in yellow, orange, or red.
+          location. On these precipitation-type radar maps, blue shades
+          typically represent snow, pink or purple shades represent
+          freezing rain and sleet, and green shades represent rain.
+        </p>
+        <p>
+          Most standard live radar displays instead show precipitation <strong>intensity</strong>
+          rather than type, using the classic green-to-red reflectivity
+          scale. On these maps, green indicates lighter precipitation,
+          while yellow, orange, and red indicate progressively heavier
+          precipitation, with the heaviest rain (often associated with
+          thunderstorms) appearing in pink/purple shades. This scale doesn't tell you
+          whether it's raining or snowing, so it's
+          usually paired with temperature data or a separate precip-type
+          product when that distinction matters.
         </p>
         <figure class="content-figure">
           <img src="precip-radar-annotated.jpg" alt="Radar forecast for a winter storm over the central United States" class="enlargeable-image">
@@ -222,6 +234,31 @@
             allowing meteorologists to adjust the forecast based on current conditions.
       </p>
     </section>
+
+    <section class="content-block">
+      <h2>Live Radar</h2>
+      <p>
+        Track precipitation happening right now. Pan and zoom the map to any
+        location, and use the play/pause button to animate the last 50
+        minutes of radar returns.
+      </p>
+      <p class="radar-note">
+        <strong>Note:</strong> this radar uses the standard reflectivity
+        scale (green = lighter precipitation, red = heavier), which shows
+        intensity rather than precipitation type. It won't match the
+        blue/green/pink color legend described earlier on this page — that
+        color-by-type view comes from a different, more specialized data
+        product.
+      </p>
+
+      <div class="radar-container">
+        <div id="radar-map" class="radar-map"></div>
+        <div class="radar-controls">
+          <button type="button" id="radar-play-btn" class="radar-play-btn">Pause</button>
+          <span id="radar-timestamp" class="radar-timestamp">Loading radar…</span>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Image lightbox overlay -->
@@ -236,6 +273,8 @@
 
   <script src="../imageLightbox.js"></script>
   <script src="precipDiagram.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="liveRadar.js"></script>
 
 </body>
 </html>
