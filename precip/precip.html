@@ -204,13 +204,14 @@
           freezing rain and sleet, and green shades represent rain.
         </p>
         <p>
-          Most standard live radar displays instead show precipitation <strong>intensity</strong>
+          Most standard radar displays — including the live radar later on
+          this page — instead show precipitation <strong>intensity</strong>
           rather than type, using the classic green-to-red reflectivity
           scale. On these maps, green indicates lighter precipitation,
           while yellow, orange, and red indicate progressively heavier
           precipitation, with the heaviest rain (often associated with
-          thunderstorms) appearing in pink/purple shades. This scale doesn't tell you
-          whether it's raining or snowing, so it's
+          thunderstorms) appearing in red. This scale doesn't tell you
+          whether it's raining or snowing — just how heavy it is — so it's
           usually paired with temperature data or a separate precip-type
           product when that distinction matters.
         </p>
@@ -256,6 +257,32 @@
         <div class="radar-controls">
           <button type="button" id="radar-play-btn" class="radar-play-btn">Pause</button>
           <span id="radar-timestamp" class="radar-timestamp">Loading radar…</span>
+        </div>
+
+        <div class="radar-legend">
+          <div class="radar-legend-bar">
+            <div style="background-color: #7f8fb7;"></div>
+            <div style="background-color: #86b7d1;"></div>
+            <div style="background-color: #96dde8;"></div>
+            <div style="background-color: #4e8f4d;"></div>
+            <div style="background-color: #50ae50;"></div>
+            <div style="background-color: #53d154;"></div>
+            <div style="background-color: #ffd500;"></div>
+            <div style="background-color: #fbaa45;"></div>
+            <div style="background-color: #f64745;"></div>
+            <div style="background-color: #ba4745;"></div>
+            <div style="background-color: #f800fd;"></div>
+            <div style="background-color: #9854c6;"></div>
+          </div>
+          <div class="radar-legend-labels">
+            <span>Light</span>
+            <span>Moderate</span>
+            <span>Heavy</span>
+            <span>Extreme</span>
+          </div>
+          <p class="radar-legend-caption">
+            Reflectivity scale (dBZ), light to extreme precipitation
+          </p>
         </div>
       </div>
     </section>

@@ -384,3 +384,40 @@
 .radar-note strong {
   color: #8a6d1a;
 }
+
+/* ---------- Radar Intensity Legend ---------- */
+
+.radar-legend {
+  margin-top: 1rem;
+}
+
+.radar-legend-bar {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #dde5ec;
+}
+
+.radar-legend-bar div {
+  flex: 1;
+}
+
+.radar-legend-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #5a6472;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.radar-legend-caption {
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: #8a94a1;
+  text-align: center;
+}
