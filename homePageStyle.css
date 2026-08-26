@@ -432,10 +432,10 @@ main {
 .toggle-card-panel {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
   z-index: 10;
   width: 320px;
-  max-width: 80vw;
+  max-width: 90vw;
   margin-top: 0.5rem;
   padding: 1.1rem 1.25rem;
   background-color: #ffffff;
@@ -445,7 +445,7 @@ main {
 
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-6px);
+  transform: translate(-50%, -6px);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
@@ -469,7 +469,7 @@ main {
 .toggle-card.open .toggle-card-panel {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
  
 /* ---------- Responsive ---------- */
