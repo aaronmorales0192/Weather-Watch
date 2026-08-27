@@ -26,7 +26,9 @@
   </header>
 
   <!-- Main content -->
-  <main>
+  <main id="top">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Storms</p>
+
     <section class="page-hero">
       <div class="page-hero-content">
         <div class="page-hero-text">
@@ -40,7 +42,17 @@
       </div>
     </section>
 
-    <section class="content-block">
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc-label">On this page:</p>
+      <ul>
+        <li><a href="#ingredients">What Fuels a Thunderstorm?</a></li>
+        <li><a href="#storm-types">Types of Storms</a></li>
+        <li><a href="#tracking">How Meteorologists Track Storms</a></li>
+        <li><a href="#outlooks">SPC Convective Outlooks</a></li>
+      </ul>
+    </nav>
+
+    <section class="content-block" id="ingredients">
       <h2>What Fuels a Thunderstorm?</h2>
       <p>
         Thunderstorms rely on a specific combination of atmospheric ingredients
@@ -131,18 +143,27 @@
       </div>
     </section>
 
-    <section class="content-block">
+    <section class="content-block" id="storm-types">
       <h2>Types of Storms</h2>
 
       <p>
-        Not every thunderstorm is classified as "severe." The National Weather
-        Service defines a thunderstorm as severe if it produces at least one
-        of the following: wind gusts of 58 mph or greater or hail at least 1 inch in
-        diameter (quarter-sized). A storm that doesn't
-        meet any of these thresholds is simply considered a regular
-        thunderstorm, even if it produces heavy rain, frequent lightning, or
-        brief gusty winds. The four storm types below can each range from
-        ordinary to severe depending on the ingredients present at the time.
+        Not every thunderstorm is classified as "severe." A storm that doesn't
+        meet the criteria below is simply considered a regular thunderstorm,
+        even if it produces heavy rain, frequent lightning, or brief gusty
+        winds.
+      </p>
+
+      <div class="pull-fact">
+        <p>
+          The National Weather Service defines a thunderstorm as severe if
+          it produces wind gusts of 58 mph or greater, or hail at least
+          1 inch in diameter (quarter-sized).
+        </p>
+      </div>
+
+      <p>
+        The four storm types below can each range from ordinary to severe
+        depending on the ingredients present at the time.
       </p>
 
       <div class="storm-type-group">
@@ -150,113 +171,111 @@
         <div class="toggle-card storm-type-item">
           <button type="button" class="toggle-card-label" aria-expanded="false">Single-Cell Storms</button>
           <div class="toggle-card-panel">
-            <div class="content-with-image">
-              <p>
-                Single-cell (or "pulse") storms are the most basic type of
-                thunderstorm, consisting of a single updraft with no significant
-                organization. They typically form in weak wind shear/high CAPE environments
-                and are short-lived, usually lasting under an hour before
-                the storm's own rain-cooled outflow cuts off its updraft. Single-cell
-                storms can still produce brief heavy rain, small hail, and
-                occasional gusty winds, but they generally pose the lowest severe
-                weather risk of the four storm types.
-              </p>
-              <figure class="content-figure">
-                <img src="single.png" alt="Single-cell storm near the Georgia/South Carolina border" class="enlargeable-image">
-                <figcaption>A single-cell storm near the GA/SC border</figcaption>
-              </figure>
-            </div>
+            <figure class="float-image">
+              <img src="single.png" alt="Single-cell storm near the Georgia/South Carolina border" class="enlargeable-image">
+              <figcaption>A single-cell storm near the GA/SC border</figcaption>
+            </figure>
+            <p>
+              Single-cell (or "pulse") storms are the most basic type of
+              thunderstorm, consisting of a single updraft with no significant
+              organization. They typically form in weak wind shear/high CAPE environments
+              and are short-lived, usually lasting under an hour before
+              the storm's own rain-cooled outflow cuts off its updraft. Single-cell
+              storms can still produce brief heavy rain, small hail, and
+              occasional gusty winds, but they generally pose the lowest severe
+              weather risk of the four storm types.
+            </p>
           </div>
         </div>
 
         <div class="toggle-card storm-type-item">
           <button type="button" class="toggle-card-label" aria-expanded="false">Multi-Cell Storms</button>
           <div class="toggle-card-panel">
-            <div class="content-with-image">
-              <p>
-                Multi-cell storms are clusters of individual storm cells at
-                various stages of development, often forming along or near a
-                common boundary or source of lift. As one cell weakens, new cells 
-                can form along its outflow boundary, allowing multi-cell clusters to persist
-                much longer than single-cell storms. This longer lifespan gives
-                multi-cell storms more opportunity to produce stronger wind
-                gusts, larger hail, and, in some cases, brief tornadoes.
-              </p>
-              <figure class="content-figure">
-                <img src="multi.png" alt="Multi-cell storms developing near the DC metro area" class="enlargeable-image">
-                <figcaption>Multi-cell storms developing near the DC metro area</figcaption>
-              </figure>
-            </div>
+            <figure class="float-image float-left">
+              <img src="multi.png" alt="Multi-cell storms developing near the DC metro area" class="enlargeable-image">
+              <figcaption>Multi-cell storms developing near the DC metro area</figcaption>
+            </figure>
+            <p>
+              Multi-cell storms are clusters of individual storm cells at
+              various stages of development, often forming along or near a
+              common boundary or source of lift. As one cell weakens, new cells 
+              can form along its outflow boundary, allowing multi-cell clusters to persist
+              much longer than single-cell storms. This longer lifespan gives
+              multi-cell storms more opportunity to produce stronger wind
+              gusts, larger hail, and, in some cases, brief tornadoes.
+            </p>
           </div>
         </div>
 
         <div class="toggle-card storm-type-item">
           <button type="button" class="toggle-card-label" aria-expanded="false">Squall Lines</button>
           <div class="toggle-card-panel">
-            <div class="content-with-image">
-              <p>
-                A squall line is a long line of thunderstorms, often forming
-                along or just ahead of a cold front. Squall lines are mainly known for
-                producing widespread strong straight-line winds over a large
-                area as they move through, and in some cases can even produce
-                embedded rotation and brief QLCS-type tornadoes along the line. 
-              </p>
-              <figure class="content-figure">
-                <img src="squallline.png" alt="Squall line moving southeast over the Delmarva Peninsula" class="enlargeable-image">
-                <figcaption>A squall line moving SE over the Delmarva Peninsula</figcaption>
-              </figure>
-            </div>
+            <figure class="float-image">
+              <img src="squallline.png" alt="Squall line moving southeast over the Delmarva Peninsula" class="enlargeable-image">
+              <figcaption>A squall line moving SE over the Delmarva Peninsula</figcaption>
+            </figure>
+            <p>
+              A squall line is a long line of thunderstorms, often forming
+              along or just ahead of a cold front. Squall lines are mainly known for
+              producing widespread strong straight-line winds over a large
+              area as they move through, and in some cases can even produce
+              embedded rotation and brief QLCS-type tornadoes along the line. 
+            </p>
           </div>
         </div>
 
         <div class="toggle-card storm-type-item">
           <button type="button" class="toggle-card-label" aria-expanded="false">Supercells</button>
           <div class="toggle-card-panel">
-            <div class="content-with-image">
-              <p>
-                Supercells are the most organized and dangerous type of
-                thunderstorm, defined by a deep, persistent rotating updraft
-                known as a mesocyclone. Strong wind shear allows this rotation to
-                develop and sustain itself, sometimes for hours at a time. Supercells
-                are responsible for the vast majority of significant tornadoes,
-                as well as very large hail and extreme wind gusts. 
-              </p>
-              <figure class="content-figure">
-                <img src="super.png" alt="Velocity radar scan of a powerful supercell producing a strong tornado" class="enlargeable-image">
-                <figcaption>Velocity radar scan of a powerful supercell producing a strong tornado</figcaption>
-              </figure>
+            <figure class="float-image float-left">
+              <img src="super.png" alt="Velocity radar scan of a powerful supercell producing a strong tornado" class="enlargeable-image">
+              <figcaption>Velocity radar scan of a powerful supercell producing a strong tornado</figcaption>
+            </figure>
+            <p>
+              Supercells are the most organized and dangerous type of
+              thunderstorm, defined by a deep, persistent rotating updraft
+              known as a mesocyclone. Strong wind shear allows this rotation to
+              develop and sustain itself, sometimes for hours at a time.
+            </p>
+            <div class="pull-fact">
+              <p>Supercells are responsible for the vast majority of significant tornadoes.</p>
             </div>
+            <p>
+              They also produce very large hail and extreme wind gusts, making
+              them the primary focus of severe weather forecasting.
+            </p>
           </div>
         </div>
 
       </div>
     </section>
 
-    <section class="content-block">
+    <section class="content-open" id="tracking">
       <h2>How Meteorologists Track Storms</h2>
-      <div class="content-with-image">
-        <p>
-          Before storms form, meteorologists examine whether the atmosphere contains the
-          ingredients needed for severe thunderstorms, such as sufficient <strong>moisture,
-          instability (CAPE), and wind shear</strong>. Meteorologists often use shorter-range
-          <strong>CAMs (Convection-Allowing Models)</strong>, which are weather models designed
-          to explicitly simulate individual thunderstorms, squall lines, and other smaller-scale
-          features rather than just broad areas of precipitation. By analyzing these models along
-          with the atmosphere's thermodynamic and wind environment, meteorologists can create
-          outlooks identifying areas where hazards such as tornadoes, flooding, and severe
-          thunderstorms are more likely to develop. As storms begin to form, <strong>weather
-          radar</strong> becomes one of the most important tools for tracking them. Meteorologists
-          use radar to monitor storm location, intensity, movement, and rotation while comparing
-          the observed storms with CAM forecasts to evaluate how well the models are verifying.
-        </p>
-        <figure class="content-figure">
-          <img src="spc.png" alt="Storm Prediction Center convective outlook" class="enlargeable-image">
-          <figcaption>An SPC convective outlook highlighting the severe weather risk for a given day</figcaption>
-        </figure>
-      </div>
+      <figure class="float-image">
+        <img src="spc.png" alt="Storm Prediction Center convective outlook" class="enlargeable-image">
+        <figcaption>An SPC convective outlook highlighting the severe weather risk for a given day</figcaption>
+      </figure>
+      <p>
+        Before storms form, meteorologists examine whether the atmosphere contains the
+        ingredients needed for severe thunderstorms, such as sufficient <strong>moisture,
+        instability (CAPE), and wind shear</strong>. Meteorologists often use shorter-range
+        <strong>CAMs (Convection-Allowing Models)</strong>, which are weather models designed
+        to explicitly simulate individual thunderstorms, squall lines, and other smaller-scale
+        features rather than just broad areas of precipitation.
+      </p>
+      <p>
+        By analyzing these models along
+        with the atmosphere's thermodynamic and wind environment, meteorologists can create
+        outlooks identifying areas where hazards such as tornadoes, flooding, and severe
+        thunderstorms are more likely to develop. As storms begin to form, <strong>weather
+        radar</strong> becomes one of the most important tools for tracking them. Meteorologists
+        use radar to monitor storm location, intensity, movement, and rotation while comparing
+        the observed storms with CAM forecasts to evaluate how well the models are verifying.
+      </p>
     </section>
 
-    <section class="content-block">
+    <section class="content-block alt" id="outlooks">
       <h2>SPC Convective Outlooks</h2>
       <p>
         The Storm Prediction Center issues severe thunderstorm risk outlooks
@@ -282,6 +301,8 @@
         </a>
       </div>
     </section>
+
+    <p class="back-to-top"><a href="#top">&uarr; Back to top</a></p>
   </main>
 
   <!-- Image lightbox overlay -->

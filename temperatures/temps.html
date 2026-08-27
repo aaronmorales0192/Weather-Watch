@@ -26,7 +26,9 @@
   </header>
 
   <!-- Main content -->
-  <main>
+  <main id="top">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Temperatures</p>
+
     <section class="page-hero">
       <div class="page-hero-content">
         <div class="page-hero-text">
@@ -39,23 +41,37 @@
       </div>
     </section>
 
-    <section class="content-block">
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc-label">On this page:</p>
+      <ul>
+        <li><a href="#using-models">Using Models to Forecast Temperatures</a></li>
+        <li><a href="#how-forecast">How Meteorologists Forecast Temperatures</a></li>
+        <li><a href="#variability">Factors That Cause Temperature Variability</a></li>
+      </ul>
+    </nav>
+
+    <section class="content-block" id="using-models">
       <h2>Using Models to Forecast Temperatures?</h2>
-      <div class="content-with-image">
+      <figure class="float-image">
+        <img src="2m.png" alt="2m temperature output from the GFS model" class="enlargeable-image">
+        <figcaption>2m temperature output from the GFS model for a summer morning from pivotalweather.com</figcaption>
+      </figure>
+      <p>
+        Weather models can provide a baseline for forecasting temperatures. Models 
+        such as the GFS, ECMWF, HRRR, and other regional models forecast temperature 
+        at different times of the day and at multiple levels in the atmosphere.
+      </p>
+      <div class="pull-fact">
         <p>
-          Weather models can provide a baseline for forecasting temperatures. Models 
-          such as the GFS, ECMWF, HRRR, and other regional models forecast temperature 
-          at different times of the day and at multiple levels in the atmosphere. When 
-          forecasting surface temperatures, meteorologists generally examine the <strong> 2m
-          temperature </strong>, which represents the temperature approximately 2 meters (6.5 feet)
-          above the ground. This value is commonly used as an estimate of the air temperature
-          near the surface and is the basis for many standard forecasts.
+          Meteorologists generally examine the 2m temperature — the temperature
+          approximately 2 meters (6.5 feet) above the ground — as the standard
+          estimate of surface air temperature.
         </p>
-        <figure class="content-figure">
-          <img src="2m.png" alt="2m temperature output from the GFS model" class="enlargeable-image">
-          <figcaption>2m temperature output from the GFS model for a summer morning from pivotalweather.com</figcaption>
-        </figure>
       </div>
+      <p>
+        This value is commonly used as an estimate of the air temperature
+        near the surface and is the basis for many standard forecasts.
+      </p>
 
       <div class="external-links">
         <a href="https://www.pivotalweather.com/model.php?m=gfs&p=sfct&r=conus" target="_blank" rel="noopener" class="external-link-button">
@@ -64,36 +80,39 @@
       </div>
     </section>
 
-    <section class="content-block">
+    <section class="content-open" id="how-forecast">
       <h2>How Meteorologists Forecast Temperatures</h2>
       <p>
         Forecasters will often start by comparing different weather models. 
         For example, if the GFS and ECMWF predicted 84°F and 82°F, while the NAM and 
         HRRR predicted 80°F and 81°F, a forecaster might conclude that 81–83°F is more 
-        reasonable rather than blindly choosing the GFS's 84°F. Meteorologists also learn
-        the biases and tendencies of different models through experience and can account
-        for them when creating forecasts. For example, the GFS is known to have a slight
-        cold bias in the eastern U.S. during winter events, which forecasters can take 
-        into account when using it.
+        reasonable rather than blindly choosing the GFS's 84°F.
+      </p>
+      <p>
+        Meteorologists also learn the biases and tendencies of different models
+        through experience and can account for them when creating forecasts.
+        For example, the GFS is known to have a slight cold bias in the eastern
+        U.S. during winter events, which forecasters can take into account
+        when using it.
       </p>
     </section>
 
-    <section class="content-block">
+    <section class="content-block" id="variability">
       <h2>Factors That Cause Temperature Variability</h2>
-      <div class="content-with-image">
-        <p>
-         Meteorologists also consider factors beyond weather model guidance when creating 
-         temperature forecasts. While models account for terrain, forecasters can use their 
-         knowledge of local elevation and urban heat islands to further refine temperatures. 
-         They also consider factors such as cold and warm fronts, cloud cover, and wind, which
-        all can influence temperatures.
-        </p>
-        <figure class="content-figure">
-          <img src="coldfront.png" alt="Cold front approaching" class="enlargeable-image">
-          <figcaption>A cold front moving through can drop temperatures by 20–30°F in a matter of hours</figcaption>
-        </figure>
-      </div>
+      <figure class="float-image float-left">
+        <img src="coldfront.png" alt="Cold front approaching" class="enlargeable-image">
+        <figcaption>A cold front moving through can drop temperatures by 20–30°F in a matter of hours</figcaption>
+      </figure>
+      <p>
+       Meteorologists also consider factors beyond weather model guidance when creating 
+       temperature forecasts. While models account for terrain, forecasters can use their 
+       knowledge of local elevation and urban heat islands to further refine temperatures. 
+       They also consider factors such as cold and warm fronts, cloud cover, and wind, which
+       all can influence temperatures.
+      </p>
     </section>
+
+    <p class="back-to-top"><a href="#top">&uarr; Back to top</a></p>
   </main>
 
   <!-- Image lightbox overlay -->
@@ -103,7 +122,7 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <p>&copy; 2026 Aaron Morales @DMV Weather. All rights reserved.</p>
+    <p>&copy; 2026 Weather Watch. All rights reserved.</p>
   </footer>
 
   <script src="../imageLightbox.js"></script>

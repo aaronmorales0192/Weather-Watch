@@ -1,4 +1,9 @@
 /* ---------- Reset & Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -432,7 +437,7 @@ main {
 .toggle-card-panel {
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 0;
   z-index: 10;
   width: 320px;
   max-width: 90vw;
@@ -445,7 +450,7 @@ main {
 
   opacity: 0;
   visibility: hidden;
-  transform: translate(-50%, -6px);
+  transform: translateY(-6px);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
@@ -469,7 +474,195 @@ main {
 .toggle-card.open .toggle-card-panel {
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, 0);
+  transform: translateY(0);
+}
+
+/* On narrow screens, anchor to the right edge instead of the left when a
+   chip sits near the right side of the row, to avoid the panel overflowing
+   past the right edge of the screen. */
+@media (max-width: 600px) {
+  .toggle-card-panel {
+    width: 280px;
+  }
+}
+
+/* ---------- Breadcrumb ---------- */
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #5a6472;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+  color: #1c3d5a;
+  font-weight: 600;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+  text-decoration: underline;
+}
+
+/* ---------- Page Table of Contents ---------- */
+
+.page-toc {
+  background-color: #f4f7fa;
+  border: 1px solid #dde5ec;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-toc-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #5a6472;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 0.6rem;
+}
+
+.page-toc ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.page-toc a {
+  color: #1c3d5a;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.page-toc a:hover,
+.page-toc a:focus {
+  text-decoration: underline;
+}
+
+/* ---------- Back to Top ---------- */
+
+.back-to-top {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.back-to-top a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1c3d5a;
+}
+
+.back-to-top a:hover,
+.back-to-top a:focus {
+  text-decoration: underline;
+}
+
+/* ---------- Content Rhythm: Zigzag & Alt Sections ---------- */
+
+.content-with-image.reverse {
+  flex-direction: row-reverse;
+}
+
+.content-block.alt {
+  background-color: #eef4f9;
+  box-shadow: none;
+  border: none;
+}
+
+/* ---------- Editorial Layout Patterns ---------- */
+
+/* Clearfix so floated images don't collapse their container */
+.content-block::after,
+.content-open::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Floated image with text wrapping around it, magazine-style */
+.float-image {
+  float: right;
+  width: 260px;
+  max-width: 42%;
+  margin: 0.25rem 0 1rem 1.75rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #dde5ec;
+}
+
+.float-image.float-left {
+  float: left;
+  margin: 0.25rem 1.75rem 1rem 0;
+}
+
+.float-image img {
+  width: 100%;
+  display: block;
+}
+
+.float-image figcaption {
+  padding: 0.5rem 0.7rem;
+  font-size: 0.78rem;
+  color: #5a6472;
+  background-color: #f4f7fa;
+  text-align: center;
+}
+
+/* A fact or figure pulled out of the paragraph into its own callout */
+.pull-fact {
+  background-color: #eaf2f8;
+  border-left: 4px solid #1c3d5a;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.pull-fact p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1c3d5a;
+  max-width: none;
+}
+
+/* Open section: no card, just a divider - for a lighter, editorial feel */
+.content-open {
+  padding: 2.25rem 0.25rem;
+  border-top: 2px solid #dde5ec;
+  margin-bottom: 0;
+}
+
+.content-open:first-of-type,
+.page-toc + .content-open {
+  border-top: none;
+  padding-top: 0.5rem;
+}
+
+.content-open h2 {
+  font-size: 1.4rem;
+  color: #1c3d5a;
+  margin-bottom: 0.9rem;
+}
+
+.content-open p {
+  color: #3c4756;
+  max-width: 68ch;
+  margin-bottom: 1rem;
+}
+
+.content-open p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .float-image {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
 }
  
 /* ---------- Responsive ---------- */

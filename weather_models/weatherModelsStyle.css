@@ -185,7 +185,7 @@
 .model-category-panel {
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 0;
   z-index: 10;
   width: 320px;
   max-width: 90vw;
@@ -199,7 +199,7 @@
   /* hidden by default */
   opacity: 0;
   visibility: hidden;
-  transform: translate(-50%, -6px);
+  transform: translateY(-6px);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
@@ -221,7 +221,13 @@
 .model-category.open .model-category-panel {
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, 0);
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .model-category-panel {
+    width: 280px;
+  }
 }
 
 /* ---------- Model Quiz ---------- */

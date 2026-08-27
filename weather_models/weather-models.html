@@ -27,32 +27,48 @@
   </header>
 
   <!-- Main content -->
-  <main>
+  <main id="top">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Weather Models</p>
+
     <section class="page-hero">
       <div class="page-hero-content">
         <div class="page-hero-text">
           <h1>Weather Models</h1>
           <p>
-            Weather models are the heart and soul of modern meteorological technology. 
-            Weather models are mathematical models run on computers that allow us to process
-            massive amounts of atmospheric data and produce forecasts that help predict 
-            what the weather may look like in the hours, days, or even weeks ahead. 
-            Historically, weather forecasting has been dominated by physics-based 
-            numerical weather prediction models, which use complex equations describing 
-            atmospheric physics along with current atmospheric conditions to generate 
-            forecasts. However, in recent years, AI-based weather models have become 
-            increasingly popular. These models use machine learning to learn patterns and
-            relationships from massive amounts of historical weather data, allowing them to 
-            generate forecasts quickly and, in some cases, with accuracy comparable to the
-            traditional physics-based models.
+            An overview of the computer models meteorologists use to forecast future conditions.
           </p>
         </div>
         <img src="model1.png" alt="Weather model visualization" class="page-hero-image enlargeable-image">
       </div>
     </section>
 
-    <section class="content-block">
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc-label">On this page:</p>
+      <ul>
+        <li><a href="#different-models">What Are The Different Weather Models?</a></li>
+        <li><a href="#common-models">Common Models Used by Meteorologists</a></li>
+        <li><a href="#model-accuracy">Model Accuracy</a></li>
+        <li><a href="#how-to-view">How to Access Weather Models</a></li>
+        <li><a href="#quiz">Test Your Knowledge</a></li>
+      </ul>
+    </nav>
+
+    <section class="content-block" id="different-models">
       <h2>What Are The Different Weather Models?</h2>
+      <p>
+        Weather models are the heart and soul of modern meteorological technology. 
+        Weather models are mathematical models run on computers that allow us to process
+        massive amounts of atmospheric data and produce forecasts that help predict 
+        what the weather may look like in the hours, days, or even weeks ahead. 
+        Historically, weather forecasting has been dominated by physics-based 
+        numerical weather prediction models, which use complex equations describing 
+        atmospheric physics along with current atmospheric conditions to generate 
+        forecasts. However, in recent years, AI-based weather models have become 
+        increasingly popular. These models use machine learning to learn patterns and
+        relationships from massive amounts of historical weather data, allowing them to 
+        generate forecasts quickly and, in some cases, with accuracy comparable to the
+        traditional physics-based models.
+      </p>
       <p>
         Weather models can be divided into different categories based on factors
         such as the area they cover, their resolution, and the type of forecasting
@@ -113,53 +129,51 @@
       </div>
     </section>
 
-    <section class="content-block">
+    <section class="content-block" id="common-models">
       <h2>Common Models Used by Meteorologists</h2>
-      <div class="content-with-image">
-        <p>
-          Meteorologists use a variety of models to create a complete forecast. For those 
-          new to meteorology, the sheer number of available models can be overwhelming. Two of 
-          the most widely known and used are the <strong>ECMWF</strong> and <strong>GFS</strong> 
-          models. The ECMWF, maintained by the European Centre for Medium-Range Weather Forecasts,
-           has long been regarded as one of the world's most accurate weather models. The GFS, 
-           maintained by the U.S. National Weather Service (NWS), has undergone numerous updates 
-           and has closely followed the ECMWF in accuracy and use. Both models also have AI-based 
-           counterparts, <strong>AIFS</strong> and <strong>AIGFS</strong>, which have entered 
-           operational use in recent years.
-        </p>
-        <figure class="content-figure">
-          <img src="globalModel.png" alt="GFS model run via Pivotal Weather" class="enlargeable-image">
-          <figcaption>GFS Model Run via Pivotal Weather</figcaption>
-        </figure>
-      </div>
+      <figure class="float-image">
+        <img src="globalModel.png" alt="GFS model run via Pivotal Weather" class="enlargeable-image">
+        <figcaption>GFS Model Run via Pivotal Weather</figcaption>
+      </figure>
+      <p>
+        Meteorologists use a variety of models to create a complete forecast. For those 
+        new to meteorology, the sheer number of available models can be overwhelming. Two of 
+        the most widely known and used are the <strong>ECMWF</strong> and <strong>GFS</strong> 
+        models. The ECMWF, maintained by the European Centre for Medium-Range Weather Forecasts,
+         has long been regarded as one of the world's most accurate weather models. The GFS, 
+         maintained by the U.S. National Weather Service (NWS), has undergone numerous updates 
+         and has closely followed the ECMWF in accuracy and use. Both models also have AI-based 
+         counterparts, <strong>AIFS</strong> and <strong>AIGFS</strong>, which have entered 
+         operational use in recent years.
+      </p>
     </section>
 
-    <section class="content-block">
+    <section class="content-open" id="model-accuracy">
       <h2>Model Accuracy</h2>
-      <div class="content-with-image">
-        <p>
-          Weather models generally become less accurate as the forecast period
-          increases due to the inherent uncertainty in predicting the atmosphere.
-          In longer-range forecasts, individual model runs can vary significantly
-          from one run to the next. Because of this, meteorologists often rely
-          more heavily on ensemble guidance and examine broader model patterns
-          and trends rather than basing forecasts directly on individual model
-          runs. Weather models are also infamous for producing <strong>fantasy
-          storms</strong>, particularly in the longer range. These are storms
-          that appear in model forecasts a week or more in advance but shift, or
-          disappear entirely as subsequent model runs incorporate new data.
-          Because of this, meteorologists generally avoid treating long-range
-          storms as reliable forecasts until the signal becomes more consistent
-          across multiple model runs and ensemble members.
-        </p>
-        <figure class="content-figure">
-          <img src="fantasy.png" alt="Euro model predicting a fantasy storm along the East Coast" class="enlargeable-image">
-          <figcaption>Euro model predicting a fantasy storm along the East Coast a week in advance</figcaption>
-        </figure>
-      </div>
+      <figure class="float-image float-left">
+        <img src="fantasy.png" alt="Euro model predicting a fantasy storm along the East Coast" class="enlargeable-image">
+        <figcaption>Euro model predicting a fantasy storm along the East Coast a week in advance</figcaption>
+      </figure>
+      <p>
+        Weather models generally become less accurate as the forecast period
+        increases due to the inherent uncertainty in predicting the atmosphere.
+        In longer-range forecasts, individual model runs can vary significantly
+        from one run to the next. Because of this, meteorologists often rely
+        more heavily on ensemble guidance and examine broader model patterns
+        and trends rather than basing forecasts directly on individual model
+        runs. Weather models are also infamous for producing "fantasy storms,"
+        particularly in the longer range. These are storms that appear in
+        model forecasts a week or more in advance but shift, or disappear
+        entirely as subsequent model runs incorporate new data.
+      </p>
+      <p>
+        Because of this, meteorologists generally avoid treating long-range
+        storms as reliable forecasts until the signal becomes more consistent
+        across multiple model runs and ensemble members.
+      </p>
     </section>
 
-    <section class="content-block">
+    <section class="content-block alt" id="how-to-view">
       <h2>How to View Weather Models</h2>
       <p>
         For beginners who are just getting into meteorology, I recommend using <strong>Tropical Tidbits </strong>
@@ -181,7 +195,7 @@
       </div>
     </section>
 
-    <section class="content-block">
+    <section class="content-block" id="quiz">
       <h2>Test Your Knowledge</h2>
       <p>
         See how well you understood the difference between Global, Regional,
@@ -190,6 +204,8 @@
 
       <div id="model-quiz" class="model-quiz"></div>
     </section>
+
+    <p class="back-to-top"><a href="#top">&uarr; Back to top</a></p>
   </main>
 
   <!-- Image lightbox overlay -->

@@ -27,7 +27,9 @@
   </header>
 
   <!-- Main content -->
-  <main>
+  <main id="top">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Precipitation</p>
+
     <section class="page-hero">
       <div class="page-hero-content">
         <div class="page-hero-text">
@@ -41,7 +43,18 @@
       </div>
     </section>
 
-    <section class="content-block">
+    <nav class="page-toc" aria-label="On this page">
+      <p class="page-toc-label">On this page:</p>
+      <ul>
+        <li><a href="#types">Types of Precipitation</a></li>
+        <li><a href="#how-determined">How Precipitation Type Is Determined</a></li>
+        <li><a href="#reading-radars">Reading Radars</a></li>
+        <li><a href="#forecasting">Forecasting Precipitation</a></li>
+        <li><a href="#live-radar">Live Radar</a></li>
+      </ul>
+    </nav>
+
+    <section class="content-block alt" id="types">
       <h2>Types of Precipitation</h2>
       <p>
         What falls from a cloud almost always starts out as snow. What it
@@ -94,7 +107,7 @@
       </div>
     </section>
 
-    <section class="content-block">
+    <section class="content-block" id="how-determined">
       <h2>How Precipitation Type Is Determined</h2>
       <p>
         The diagram below shows a simplified version of the atmospheric
@@ -188,55 +201,64 @@
       </div>
     </section>
 
-    <section class="content-block">
+    <section class="content-block" id="reading-radars">
       <h2>Reading Radars</h2>
-      <div class="content-with-image">
-        <p>
-          Radar maps show meteorologists where precipitation is currently
-          falling, how intense it is, and where it's headed next. There are
-          actually two different kinds of radar color schemes you'll run
-          into, and it's worth knowing the difference. During winter
-          storms, radar output is often paired with model
-          precipitation-type guidance to distinguish not just where
-          precipitation is falling, but what kind is expected in each
-          location. On these precipitation-type radar maps, blue shades
-          typically represent snow, pink or purple shades represent
-          freezing rain and sleet, and green shades represent rain.
-        </p>
-        <p>
-          Most standard radar displays — including the live radar later on
-          this page — instead show precipitation <strong>intensity</strong>
-          rather than type, using the classic green-to-red reflectivity
-          scale. On these maps, green indicates lighter precipitation,
-          while yellow, orange, and red indicate progressively heavier
-          precipitation, with the heaviest rain (often associated with
-          thunderstorms) appearing in red. This scale doesn't tell you
-          whether it's raining or snowing — just how heavy it is — so it's
-          usually paired with temperature data or a separate precip-type
-          product when that distinction matters.
-        </p>
-        <figure class="content-figure">
-          <img src="precip-radar-annotated.jpg" alt="Radar forecast for a winter storm over the central United States" class="enlargeable-image">
-          <figcaption>A radar forecast for a winter storm over the central U.S., from tropicaltidbits.com</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="content-block">
-      <h2>Forecasting Precipitation</h2>
+      <figure class="float-image">
+        <img src="precip-radar-annotated.jpg" alt="Radar forecast for a winter storm over the central United States" class="enlargeable-image">
+        <figcaption>A radar forecast for a winter storm over the central U.S., from tropicaltidbits.com</figcaption>
+      </figure>
       <p>
-          Meteorologists forecast precipitation by examining weather model guidance to 
-          determine where precipitation is likely to develop, when it will occur, and 
-          how much precipitation may fall. They compare different models and ensemble 
-          forecasts to identify areas of agreement and uncertainty. Meteorologists also
-           examine the forecast precipitation type, particularly when rain, snow, sleet, 
-           or freezing rain are possible. As the event gets closer, radar and satellite 
-           observations provide information about how precipitation is developing and moving,
-            allowing meteorologists to adjust the forecast based on current conditions.
+        Radar maps show meteorologists where precipitation is currently
+        falling, how intense it is, and where it's headed next. There are
+        actually two different kinds of radar color schemes you'll run
+        into, and it's worth knowing the difference.
+      </p>
+      <div class="pull-fact">
+        <p>
+          Precipitation-type radar: blue = snow, pink/purple = freezing
+          rain and sleet, green = rain.
+        </p>
+      </div>
+      <p>
+        During winter storms, radar output is often paired with model
+        precipitation-type guidance to distinguish not just where
+        precipitation is falling, but what kind is expected in each
+        location.
+      </p>
+      <div class="pull-fact">
+        <p>
+          Standard reflectivity radar: blue/green = lighter precipitation,
+          yellow/orange/red = progressively heavier precipitation.
+        </p>
+      </div>
+      <p>
+        Most standard radar displays — including the live radar later on
+        this page — instead show precipitation <strong>intensity</strong>
+        rather than type. This scale doesn't tell you whether it's raining
+        or snowing — just how heavy it is — so it's usually paired with
+        temperature data or a separate precip-type product when that
+        distinction matters.
       </p>
     </section>
 
-    <section class="content-block">
+    <section class="content-open" id="forecasting">
+      <h2>Forecasting Precipitation</h2>
+      <p>
+        Meteorologists forecast precipitation by examining weather model guidance to 
+        determine where precipitation is likely to develop, when it will occur, and 
+        how much precipitation may fall. They compare different models and ensemble 
+        forecasts to identify areas of agreement and uncertainty.
+      </p>
+      <p>
+        Meteorologists also examine the forecast precipitation type, particularly
+        when rain, snow, sleet, or freezing rain are possible. As the event gets
+        closer, radar and satellite observations provide information about how
+        precipitation is developing and moving, allowing meteorologists to
+        adjust the forecast based on current conditions.
+      </p>
+    </section>
+
+    <section class="content-block" id="live-radar">
       <h2>Live Radar</h2>
       <p>
         Track precipitation happening right now. Pan and zoom the map to any
@@ -286,6 +308,8 @@
         </div>
       </div>
     </section>
+
+    <p class="back-to-top"><a href="#top">&uarr; Back to top</a></p>
   </main>
 
   <!-- Image lightbox overlay -->
