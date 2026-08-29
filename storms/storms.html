@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Watch | Storms</title>
+  <link rel="icon" type="image/png" href="../weather-icon-final.png">
   <link rel="stylesheet" href="../homePageStyle.css">
   <link rel="stylesheet" href="storms.css">
 </head>
@@ -12,7 +13,13 @@
   <!-- Header with navigation tabs -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="logo">Weather<span>Watch</span></div>
+      <div class="header-top-row">
+        <div class="logo">
+          <img src="../weather-icon-final.png" alt="" class="logo-icon">
+          Weather<span>Watch</span>
+        </div>
+        <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
       <nav class="nav-tabs">
         <ul>
           <li><a href="../weather_models/weather-models.html">Weather Models</a></li>
@@ -317,6 +324,7 @@
 
   <script src="../imageLightbox.js"></script>
   <script src="../toggleCards.js"></script>
+  <script src="../navToggle.js"></script>
 
 </body>
 </html>
